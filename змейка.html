@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Заголовок документа</title>
+</head>
+
+<body>
+<?php
+class CarModel {
+	// Состояние объекта
+	public $color;
+	public $speed;
+	public $price;
+	private $isSale;
+	protected $information;
+	
+	public function __construct($someInformation){
+		$this->information = $someInformation;
+	}
+}
+$someInformation = 'tesla';
+$tesla = new CarModel($someInformation);
+$tesla->color = 'black';
+$tesla->speed = '300';
+$tesla->price = '1$';
+//$tesla->isSale = 666; // Cannot access private property CarModel::$isSale
+// $tesla->information = 666; // Cannot access protected property CarModel::$information 
+// $tesla->information; //Cannot access protected property CarModel::$information 
+var_dump($tesla);
+
+$someInformation = 'Это vw';
+$vw = new CarModel($someInformation);
+$vw->color = 'grey';
+$vw->speed = '100';
+$vw->price = '100$';
+
+var_dump($vw);
+// Лабораторная работа 
+// Написатть программу, змейку, которая съедает линию
+//Пример реализации
+//  1)>-------------------
+//  2)*>------------------
+//  3)**********>---------
+//  4)****************>---
+// ~$ help help --me
+// ~$ https://www.youtube.com/watch?v=Vhj04XyXXJo 
+//	Команды из двух человек
+// Оценки:
+// 5 - реализация через ООП, код оригинален
+// 4 - реализация через функциональный подход, код оригинален
+// 3 - реализация через ООП или функциональный подход, код неоригинален
+// * задание со свездочкой заключается в том, что змейка проходи по массиву вида:
+// |---*-----------|
+// |---******>-----|
+// |---------------|
+// |---------------|
+// За задание со * вы получаете две оценки, вместо одной. 
+
+
+?>
+</body>
+
+</html>
